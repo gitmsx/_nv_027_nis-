@@ -67,7 +67,8 @@ public class nis : MonoBehaviour
 
         Vector2 vec2 = _VadIS.Player.Move.ReadValue<Vector2>();
         Vector3 force2 = new Vector3(vec2.x, 0f, vec2.y) * _force*100;
-        _rigidbody.AddRelativeForce(force2);
+        _rigidbody.AddTorque(force2);
+        transform.Rotate(force2);
 
         Text__info003.text = force2.ToString();
         Text__info001.text = vec2.x.ToString();
