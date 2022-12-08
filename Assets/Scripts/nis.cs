@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -70,17 +71,30 @@ public class nis : MonoBehaviour
         _rigidbody.AddTorque(force2);
         transform.Rotate(force2);
 
+        var unteract001 = _VadIS.Player.SayDialog.IsPressed();
+        if (unteract001)
+        {
+
+            print("**********************  unteract001  **********************  unteract001  **********************  ");
+
+        }
+
+
+
         Text__info003.text = force2.ToString();
         Text__info001.text = vec2.x.ToString();
         Text__info002.text = vec2.y.ToString();
+
+
+
 
     }
 
 
     void Short2()
     {
-        print(Time.deltaTime);
-        print("Time.deltaTime");
+    //    print(Time.deltaTime);
+     //   print("Time.deltaTime");
 
     }
 
