@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
+
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 using UnityEngine.UI;
 
 
@@ -14,6 +11,10 @@ public class nis : MonoBehaviour
     [SerializeField] private float _rotationSpeed = 10f;
      private Rigidbody _rigidbody;
     [SerializeField] private float _jumpForce;
+
+   
+
+
 
 
 
@@ -76,7 +77,7 @@ public class nis : MonoBehaviour
         {
 
             print("**********************  unteract001  **********************  unteract001  **********************  ");
-
+       
         }
 
 

@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class NpcBeh : MonoBehaviour
 {
 
     Rigidbody rb;
     [SerializeField]    GameObject Signal;
+
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,7 @@ public class NpcBeh : MonoBehaviour
         Signal.SetActive(true);
         print(other.gameObject.tag);
         print("********************************* OnTriggerEnter ************************");
+        print(inkJSON.text);
 
     }
 
